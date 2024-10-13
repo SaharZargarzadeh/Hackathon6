@@ -36,7 +36,7 @@ Incorporate data visualization tools to better interpret search results and prov
 # Tech Stack
 Languages: Python, JavaScript
 Frameworks: Streamlit
-Libraries: Pandas, Scikit-learn, TensorFlow (if applicable)
+Libraries: transformers torch sentence-transformers pinecone-client streamlit scikit-learn
 Tools: GitHub, Codespaces, Jupyter Notebooks
 Installation Instructions
 Clone the repository:
@@ -48,7 +48,7 @@ cd your-repo-name
 Install the dependencies:
 bash
 Copy code
-pip install -r requirements.txt
+pip install transformers torch sentence-transformers pinecone-client streamlit scikit-learn
 Usage
 Running the Streamlit app:
 bash
