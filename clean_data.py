@@ -9,8 +9,6 @@ from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone, ServerlessSpec
 import streamlit as st
 
-# Load the dataset
-df = pd.read_csv('Netflix TV Shows and Movies.csv')
 
 # Prepare text for embedding, handling NaN values
 df['title'] = df['title'].fillna('')
