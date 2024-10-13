@@ -53,11 +53,11 @@ Usage
 Running the Streamlit app:
 bash
 Copy code
-streamlit run app.py
-Running the Jupyter notebooks:
-Navigate to the notebooks/ folder and open in Jupyter:
+each section code in order
+save the Jupyter notebook as netflix_search.py
 bash
 Copy code
 cd notebooks
 jupyter notebook
-Open semantic_search_netflix.ipynb or movie_analysis.ipynb.
+run command streamlit runnetflix_search.py.
+The stream app show up in your local machine
