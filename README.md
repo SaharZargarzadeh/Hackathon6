@@ -93,30 +93,41 @@ Hackathon6/
 
 ### 1. Clone the repository
 
+
+
 ```bash
 git clone https://github.com/SaharZargarzadeh/Hackathon6.git
+
 cd Hackathon6
-2. Install dependencies
+```
+
+
+### 2. Install dependencies
 ```bash
 pip install -r requirements.txt
+```
 # OR manually install:
+```bash
 pip install transformers torch sentence-transformers pinecone-client streamlit scikit-learn
-3. Prepare data and embeddings
+```
+### 3. Prepare data and embeddings
 Run each of the following Python scripts in order:
 
 ```bash
 python clean_data.py
 python create_dataset.py
 python embed_and_store_data.py
-4. Launch the app
+```
+### 4. Launch the app
 ```bash
 streamlit run search_app.py
 App will open in your browser at http://localhost:8501
+```
 
-📄 License
+## 📄 License
 This project is licensed under the GPL-3.0 License.
 
-🙌 Acknowledgments
+## 🙌 Acknowledgments
 Hugging Face for sentence-transformers
 
 Pinecone for vector search infrastructure
@@ -126,7 +137,7 @@ Streamlit for the rapid prototyping framework
 Hackathon6 mentors and organizers
 
 
-✅ Let me know if you'd like me to also generate:
+## ✅ Let me know if you'd like me to also generate:
 - A `requirements.txt` file  
 - A badge-friendly GitHub “About” section  
 - A banner image for the top of the README  
