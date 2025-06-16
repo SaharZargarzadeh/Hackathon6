@@ -1,63 +1,133 @@
-# Hackathon6
-Semantic Search
+# 🎬 MovieSeek: Semantic Search for Movies  
+*A Hackathon6 Project – Built with Streamlit, Hugging Face Transformers & Pinecone*
+
+![License](https://img.shields.io/github/license/SaharZargarzadeh/Hackathon6)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-frontend-orange)
+![Status](https://img.shields.io/badge/status-Prototype-green)
+
+## 🌟 Project Overview  
+**MovieSeek** is a semantic search engine that allows users to explore movies using natural language queries. Instead of keyword-based filters, our app uses embeddings from pre-trained language models to retrieve relevant results based on meaning—not just syntax.
+
+> This project was created during Hackathon6 to demonstrate how LLM-powered search can be applied to entertainment data such as Netflix and IMDb.
+
+---
+
+## 🔍 Key Features
+
+- 🧠 **Semantic Search** using Hugging Face sentence-transformers and Pinecone vector database  
+- 🎞️ Query Netflix/IMDb-style datasets using **natural language**  
+- ⚡ **Streamlit App** frontend for interactive movie exploration  
+- 📈 Backend pipeline for data cleaning, embedding generation, and storage
+
+---
+
+## 🧠 Motivation  
+With countless movies available, it can be overwhelming to choose what to watch. Our goal was to design an intelligent system that understands user intent—even if vague or descriptive—and returns meaningful recommendations.
+
+---
+
+## 🏗️ Architecture & Tech Stack
+
+| Layer        | Technology                                             |
+|--------------|--------------------------------------------------------|
+| Frontend     | Streamlit                                              |
+| Backend      | Python, sentence-transformers, Pinecone, scikit-learn |
+| Embedding    | `all-MiniLM-L6-v2` via Hugging Face Transformers       |
+| Data Storage | Pinecone Vector DB                                     |
+| Dev Tools    | GitHub Codespaces, Jupyter Notebooks                   |
+
+---
+
+## 📂 Repository Structure
+
+Hackathon6/
+├── LICENSE
+├── README.md
+├── Netflix TV Shows and Movies.csv # Raw dataset
+├── clean_data.py # Data cleaning script
+├── create_dataset.py # Dataset preparation
+├── embed_and_store_data.py # Generate and push embeddings
+├── search_app.py # Streamlit app entry point
 
 
-# Inspiration
-In the age of overwhelming movie choices, we aimed to create an application that makes exploring film data simpler and more intuitive. By leveraging the power of semantic search, MovieSeek allows users to find and discover movies based on natural language queries, making it easier to connect with the films they love.
-# What it Does
-MovieSeek allows users to:
-Search movie datasets using natural language queries.
-Explore movie data, including ratings, genres, and reviews, retrieving relevant information quickly.
-Our initial demo uses Netflix/IMDB datasets for semantic search testing, providing a solid foundation for a movie-centric exploration tool.
-# How We Built It
-Front-end: Built using Streamlit, offering a clean and user-friendly interface.
-Back-end: Python code handles data retrieval and the semantic search functionality.
-Data: Utilized Netflix/IMDB datasets for semantic search testing and movie analysis.
-Collaboration was facilitated through Codespaces, enabling real-time coding and communication.
-# Challenges We Ran Into
-Team Organization: Initial hurdles in time management and team coordination.
-Tech Stack: As first-time users of semantic search, we had to rapidly learn and adapt our approach.
-# External Issues: Faced setbacks due to external factors but regained focus after attending a workshop on RAG AI (Retrieval-Augmented Generation).
-Time Constraints: Balancing data integration and frontend development under tight deadlines proved challenging.
-# Accomplishments We're Proud Of
-Successfully implemented semantic search using Netflix and IMDB datasets.
-Developed a Streamlit-based frontend for easy demonstration and user interaction.
-Overcame initial setbacks to deliver a functional project on time.
-Promoted collaboration among team members with diverse academic backgrounds.
-# What We Learned
-Gained insights into integrating semantic search with diverse datasets to create a user-friendly application.
-Improved our skills with Streamlit, enhancing our capability to build effective frontends quickly.
-Acquired valuable experience in project management and rapid development under pressure.
-# What's Next
-Expand the dataset to include more comprehensive movie data, focusing on user preferences and trends.
-Enhance the semantic search algorithms for more nuanced and specific movie-related queries.
-Broaden frontend functionalities, transitioning towards a more dynamic full-stack web application.
-Incorporate data visualization tools to better interpret search results and provide deeper insights.
-# Tech Stack
-Languages: Python, JavaScript
-Frameworks: Streamlit
-Libraries: transformers torch sentence-transformers pinecone-client streamlit scikit-learn
-Tools: GitHub, Codespaces, Jupyter Notebooks
-Installation Instructions
-Clone the repository:
-bash
-Copy code
-git clone
-https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
-Install the dependencies:
-bash
-Copy code
+---
+
+## 🚧 Challenges Faced
+
+- 📚 Learning curve with semantic search and vector databases  
+- ⏱️ Limited time to integrate frontend with backend  
+- 🤝 Team collaboration across different skill levels  
+- 🔄 Adjusting scope mid-hackathon due to RAG AI workshop insights
+
+---
+
+## ✅ Achievements
+
+- Successfully implemented **end-to-end semantic search**  
+- Created a working **Streamlit interface** for real-time movie queries  
+- Promoted **cross-disciplinary teamwork** under tight deadlines  
+- Used real-world movie datasets for a meaningful demo
+
+---
+
+## 📚 Lessons Learned
+
+- How to leverage **semantic embeddings** for search and ranking  
+- Importance of **cleaning and preprocessing** for real-world datasets  
+- How to quickly prototype apps with **Streamlit**  
+- Integration between **frontend UX** and backend ML models
+
+---
+
+## 🚀 What's Next
+
+- ✅ Expand dataset coverage with additional metadata (e.g., user reviews, actors)  
+- 🔍 Improve retrieval quality using custom fine-tuning  
+- 🖥️ Migrate to a more dynamic full-stack framework (e.g., React + FastAPI)  
+- 📊 Add interactive data visualizations for richer user feedback
+
+---
+
+## 🛠️ Installation & Usage
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/SaharZargarzadeh/Hackathon6.git
+cd Hackathon6
+2. Install dependencies
+```bash
+pip install -r requirements.txt
+# OR manually install:
 pip install transformers torch sentence-transformers pinecone-client streamlit scikit-learn
-Usage
-Running the Streamlit app:
-bash
-Copy code
-each section code in order
-save the Jupyter notebook as netflix_search.py
-bash
-Copy code
-cd notebooks
-jupyter notebook
-run command streamlit runnetflix_search.py.
-The stream app show up in your local machine
+3. Prepare data and embeddings
+Run each of the following Python scripts in order:
+
+```bash
+python clean_data.py
+python create_dataset.py
+python embed_and_store_data.py
+4. Launch the app
+```bash
+streamlit run search_app.py
+App will open in your browser at http://localhost:8501
+
+📄 License
+This project is licensed under the GPL-3.0 License.
+
+🙌 Acknowledgments
+Hugging Face for sentence-transformers
+
+Pinecone for vector search infrastructure
+
+Streamlit for the rapid prototyping framework
+
+Hackathon6 mentors and organizers
+
+
+✅ Let me know if you'd like me to also generate:
+- A `requirements.txt` file  
+- A badge-friendly GitHub “About” section  
+- A banner image for the top of the README  
+- A project thumbnail for social media previews
